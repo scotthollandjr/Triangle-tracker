@@ -2,6 +2,10 @@ describe('triTrack', function() {
   it("a triangle with no equal sides should be a scalene", function() {
     expect(triTrack(15, 20, 10)).to.equal(true);
   });
+
+  it("a triangle with all equal sides should be an equilateral", function() {
+    expect(triTrack(20, 20, 20)).to.equal(true);
+  });
 });
 
 // behaviour || input example || output example
