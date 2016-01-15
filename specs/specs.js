@@ -6,6 +6,10 @@ describe('triTrack', function() {
   it("a triangle with all equal sides should be an equilateral", function() {
     expect(triTrack(20, 20, 20)).to.equal(true);
   });
+
+  it("a triangle with exactly two equal sides should be an isoceles", function() {
+    expect(triTrack(20, 20, 15)).to.equal(true);
+  });
 });
 
 // behaviour || input example || output example

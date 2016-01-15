@@ -4,6 +4,8 @@ var triTrack = function(a, b, c) {
     alert("Scalene!")
   } else if (( a === b ) && (a === c) && ( b === c )) {
     return true;
+  } else if (((a === b) && (b !== c)) || ((b === c) && (a !== b))) {
+    return true;
   }
 };
 
