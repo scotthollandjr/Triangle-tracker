@@ -1,4 +1,8 @@
 describe('triTrack', function() {
+  it("if the sum of any 2 sides is greater or = to the remaining side, not a triangle", function() {
+    expect(triTrack(20, 20, 50)).to.equal(true);
+  });
+
   it("a triangle with no equal sides should be a scalene", function() {
     expect(triTrack(15, 20, 10)).to.equal(true);
   });
