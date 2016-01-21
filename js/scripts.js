@@ -1,14 +1,14 @@
-function triTrack(a, b, c) {
-  if (( a + b <= c ) || ( a + c <= b ) || ( b + c <= a)) {
-    alert("Not a triangle!");
-  } else if ((a !== b) && (a !== c) && (b !== c)) {
-    alert("Scalene!");
+function triangle(a, b, c) {
+  return (( a + b <= c ) || ( a + c <= b ) || ( b + c <= a))
+};
+
+function triType(a, b, c) {
+  if ((a !== b) && (a !== c) && (b !== c)) {
+    return "Scalene!";
   } else if (( a === b ) && (a === c) && ( b === c )) {
-    alert("Equilateral!");
+    return "Equilateral!";
   } else if (((a === b) && (b !== c)) || ((b === c) && (a !== b)) || ((a === c) && (a !== b))) {
-    alert("Isosceles!");
-  } else {
-    alert("Probably not a triangle!");
+    return "Isosceles!";
   }
 };
 
@@ -18,7 +18,8 @@ $(document).ready(function() {
     var b = parseInt($("input#side2").val());
     var c = parseInt($("input#side3").val());
 
-    triTrack(a, b, c);
+    triangle(a, b, c);
+    alert(triTrack(a, b, c));
 
     event.preventDefault();
   });
